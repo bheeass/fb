@@ -1,0 +1,142 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: f0f2f5;
+    font-family: Arial, sans-serif;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.title-box{
+    width: 500px;
+}
+.title-box img{
+    width: 300px;
+    margin: -24px;
+    margin-bottom: -2px;
+}
+.title-box p{
+    color: black;
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 32px;
+    margin-top: -12px;
+
+}
+.form-box{
+    width: 350px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    background: #fff;
+    margin-left: 60px;
+    box-shadow: 0px 2px 10px 1px rgba(71, 71, 71, 0.52);
+}
+.form-box input{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 18px;
+    box-sizing: border-box;
+    border: 1px solid #eeebeb;
+    border-radius: 5px;
+    outline: none;
+}
+.form-box input:focus{
+    box-shadow: 0px 0px 1px 1px rgb(22, 111, 229);
+}
+.form-box button{
+    width: 100%;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    padding: 13px 0;
+    cursor: pointer;
+    background: #166fe5;
+}
+.form-box button:hover{
+    background: #1877f2;
+}
+.form-box a{
+    color: #166fe5;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    display: block;
+}
+.form-box a:hover{
+    text-decoration: underline;
+}
+.form-box hr{
+    border: 1px solid #dadde1;
+    margin-bottom: 15px;
+}
+.form-box .create-btn a{
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    background: #36a420;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 5px;
+
+}
+.alert{
+    position: fixed;
+    top: 25px;
+    right: 9px;
+    background-color: red;
+    color: #fff;
+}
+@media (max-width: 900px) {
+    .box {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 0;
+    }
+    .title-box {
+        width: 90%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .form-box {
+        margin-left: 0;
+        width: 90%;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 500px) {
+    .title-box {
+        width: 100%;
+    }
+    .title-box img {
+        width: 180px;
+    }
+    .form-box {
+        width: 100%;
+        padding: 10px;
+    }
+    .form-box input,
+    .form-box button {
+        font-size: 16px;
+        padding: 12px;
+    }
+    .form-box .create-btn a {
+        font-size: 14px;
+        padding: 12px 10px;
+    }
+    body {
+        font-size: 14px;
+    }
+}
