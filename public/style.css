@@ -97,6 +97,9 @@ body{
     right: 9px;
     background-color: red;
     color: #fff;
+    width: 300px;
+    padding: 10px;
+    border-radius: 3px;
 }
 @media (max-width: 900px) {
     .box {
