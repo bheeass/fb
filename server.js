@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const app = express();
 const db = require('./database');
@@ -26,7 +25,9 @@ app.post('/login', (req, res) => {
     });
 });
 
-const port = 1000;
-app.listen(port, () =>{
-    console.log(`server started on port ${port}`)
-})
+module.exports = app; 
+
+// const port = 1000;
+// app.listen(port, () =>{
+//     console.log(`server started on port ${port}`)
+// })
