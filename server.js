@@ -1,11 +1,14 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const db = require('./database');
 
-// Set EJS as the view engine
+// Set EJS as the view engine and explicit views directory
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
-app.use(express.static('public'));
+// Serve static files from absolute path
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res)=>{
